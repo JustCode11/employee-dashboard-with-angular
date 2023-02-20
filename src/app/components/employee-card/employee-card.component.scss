@@ -1,0 +1,65 @@
+@use '../../../helperStyles/' as hs;
+
+.card {
+    background-color: hs.$bgContainerColor;
+    border-radius: hs.rem(15);
+    padding: hs.rem(30);
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: hs.$white;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        fa-icon {
+            color: hs.$purple;
+            font-size: hs.rem(20);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+
+        img {
+            width: hs.rem(100);
+            height: hs.rem(100);
+            align-self: center;
+            border-radius: 50%;
+        }
+
+        &__name {
+            font-size: hs.rem(20);
+            font-weight: bold;
+            color: hs.$darkPurple;
+        }
+
+        &__jobContainer {
+            &__item {
+                font-size: hs.rem(14);
+                color: hs.$darkPurple;
+                background-color: hs.$bgJobContainerColor;
+                padding: hs.rem(5) hs.rem(10);
+                border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+            }
+        }
+
+        &__phone {
+            color: hs.$darkPurple;
+            font-size: hs.rem(18);
+        }
+
+        &__email {
+            color: hs.$purple;
+            font-size: hs.rem(18);
+        }
+    }
+}

@@ -1,0 +1,180 @@
+@use '../../../helperStyles/' as hs;
+
+main {
+    background-color: hs.$white;
+    padding: hs.rem(20) hs.rem(50);
+    border-radius: hs.rem(0) hs.rem(15) hs.rem(15) hs.rem(15);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+    h1 {
+        color: hs.$darkPurple;
+
+        span {
+            color: hs.$fontColor;
+        }
+    }
+
+    .overviewBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: hs.rem(50);
+
+        &__stats {
+            background-color: hs.$bgContainerColor;
+            border-radius: hs.rem(15);
+            display: flex;
+            padding: hs.rem(10) hs.rem(20);
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: hs.$fontColor;
+                font-size: hs.rem(14);
+
+                &:not(:last-child) {
+                    margin-right: hs.rem(30);
+                }
+
+                &__icon {
+                    color: hs.$purple;
+                    font-size: hs.rem(16);
+
+                    fa-icon {
+                        margin-right: hs.rem(5);
+                    }
+                }
+            }
+        }
+
+        &__buttons {
+
+            button {
+                color: hs.$white;
+                width: hs.rem(200);
+                padding: hs.rem(10);
+                border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+
+                &:first-child {
+                    background-color: hs.$purple;
+                    margin-right: hs.rem(10);
+                }
+
+                &:last-child {
+                    background-color: hs.$darkPurple;
+                }
+            }
+        }
+    }
+
+    .separator {
+        margin-top: hs.rem(15);
+        margin-bottom: hs.rem(15);
+
+        hr {
+            height: hs.rem(1);
+            background-color: hs.$separatorColor;
+            border: none;
+        }
+    }
+
+    .searchBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: hs.rem(10) hs.rem(20);
+        border-radius: hs.rem(15);
+        background-color: hs.$bgContainerColor;
+        margin-bottom: hs.rem(30);
+
+        &__inputContainer {
+            display: flex;
+
+            &__inputField {
+
+                .searchElement {
+                    font-size: hs.rem(14);
+                    padding: hs.rem(10) hs.rem(15);
+                    border: hs.$inputColor hs.rem(1) solid;
+                    border-radius: hs.rem(10);
+                    outline: none;
+                }
+
+                input {
+                    width: hs.rem(300);
+                    margin-right: hs.rem(15);
+
+                    &::placeholder {
+                        color: hs.$inputColor;
+                    }
+                }
+
+                select {
+                    width: hs.rem(150);
+
+                    &:invalid {
+                        color: hs.$inputColor;
+                    }
+                }
+            }
+        }
+
+        &__iconsContainer {
+            display: flex;
+            align-items: center;
+
+            &__sortByContainer {
+                font-weight: bold;
+                color: hs.$darkPurple;
+                margin-right: hs.rem(15);
+
+                select {
+                    border: none;
+                    background: none;
+                }
+            }
+
+            &__viewContainer {
+                display: flex;
+
+                &__item {
+                    padding: hs.rem(2) hs.rem(5);
+                    border-radius: hs.rem(2);
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-right: hs.rem(10);
+                    }
+
+                    &.selected {
+                        background: hs.$linkColor;
+                    }
+
+                    fa-icon {
+                        font-size: hs.rem(18);
+                    }
+                }
+            }
+        }
+    }
+
+    .employeeContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: hs.rem(30);
+    }
+
+    .employeeListContainer {
+        padding: 0;
+
+        &__listItemContainer {
+            list-style-type: none;
+
+            &:not(:last-child) {
+                margin-bottom: hs.rem(15);
+            }
+        }
+    }
+}

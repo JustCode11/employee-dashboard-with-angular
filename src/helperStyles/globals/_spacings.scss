@@ -1,0 +1,7 @@
+@use '../utils/' as u;
+
+$distance: 15;
+
+.spacing>*:not(:last-child) {
+    margin-bottom: u.rem($distance);
+}

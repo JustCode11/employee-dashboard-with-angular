@@ -1,0 +1,19 @@
+<div class="listItem">
+    <div class="listItem__status" [ngSwitch]="employee.status">
+        <fa-icon *ngSwitchCase="'work'" [icon]="faPaperclip"></fa-icon>
+        <fa-icon *ngSwitchCase="'ill'" [icon]="faCapsules"></fa-icon>
+        <fa-icon *ngSwitchCase="'vacation'" [icon]="faPlane"></fa-icon>
+        <fa-icon *ngSwitchCase="'dayOff'" [icon]="faThumbtack"></fa-icon>
+    </div>
+    <div class="listItem__name">
+        {{employee.name}}
+    </div>
+    <div class="listItem__job">
+        <span>{{employee.job}}</span>
+    </div>
+    <div class="listItem__phone">{{employee.phone}}</div>
+    <div class="listItem__email">{{employee.email}}</div>
+    <div class="listItem__moreIcon">
+        <fa-icon [icon]="faEllipsisVertical"></fa-icon>
+    </div>
+</div>

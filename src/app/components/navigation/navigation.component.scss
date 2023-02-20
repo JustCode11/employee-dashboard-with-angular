@@ -1,0 +1,75 @@
+@use '../../../helperStyles/' as hs;
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+    .linkContainer {
+        width: hs.rem(120);
+        padding: hs.rem(10);
+
+        &:not(:last-child) {
+            margin-bottom: hs.rem(10);
+        }
+
+        .overlay {
+            position: absolute;
+        }
+
+        &.selected {
+            position: relative;
+            background: hs.$white;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+            &::before {
+                content: "";
+                position: absolute;
+
+                background-color: transparent;
+                width: hs.rem(25);
+                height: hs.rem(50);
+                border-top-right-radius: hs.rem(15);
+                right: 0;
+                bottom: hs.rem(-50);
+                box-shadow: 0 -25px 0 0 hs.$white;
+                z-index: 1;
+            }
+
+            .overlay {
+                width: hs.rem(10);
+                background: hs.$white;
+                top: 0;
+                right: 0;
+                width: hs.rem(7);
+                height: hs.rem(107);
+                z-index: 1;
+            }
+        }
+
+        a {
+            background-color: hs.$linkColor;
+            color: hs.$darkPurple;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: hs.rem(85);
+            height: hs.rem(85);
+            border-radius: 50%;
+            font-size: hs.rem(11);
+            font-weight: bold;
+
+            &.selected {
+                background-color: hs.$darkPurple;
+                color: hs.$white;
+            }
+
+            fa-icon {
+                font-size: hs.rem(18);
+            }
+        }
+    }
+}

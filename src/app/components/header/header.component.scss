@@ -1,0 +1,60 @@
+@use '../../../helperStyles/' as hs;
+
+header {
+    background-color: hs.$darkPurple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: hs.rem(15);
+    border-radius: hs.rem(15);
+    margin-bottom: hs.rem(20);
+
+    .userContainer {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: hs.rem(60);
+            height: hs.rem(60);
+            border-radius: 50%;
+        }
+
+        &__infos {
+            margin-left: hs.rem(10);
+
+            &__name {
+                color: hs.$white;
+                font-size: hs.rem(24);
+            }
+
+            &__job {
+                color: hs.$fontColor;
+            }
+        }
+    }
+
+    .buttonsContainer {
+        display: flex;
+
+        button {
+            width: hs.rem(150);
+            color: hs.$white;
+            background-color: hs.$slightlyLighterPurple;
+            border-radius: hs.rem(15);
+            font-size: hs.rem(14);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: hs.rem(60);
+
+            fa-icon {
+                margin-right: hs.rem(10);
+                font-size: hs.rem(18);
+            }
+
+            &:not(:last-child) {
+                margin-right: hs.rem(10);
+            }
+        }
+    }
+}

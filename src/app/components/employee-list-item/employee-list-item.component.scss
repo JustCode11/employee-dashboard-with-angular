@@ -1,0 +1,54 @@
+@use '../../../helperStyles/' as hs;
+
+.listItem {
+    display: flex;
+    align-items: center;
+    height: hs.rem(45);
+    background-color: hs.$bgContainerColor;
+    border-radius: hs.rem(15);
+    padding: hs.rem(10) hs.rem(15);
+
+    &__status {
+        margin-right: hs.rem(100);
+        font-size: hs.rem(18);
+        color: hs.$purple;
+    }
+
+    &__name {
+        color: hs.$darkPurple;
+        font-weight: bold;
+        font-size: hs.rem(18);
+        margin-right: hs.rem(40);
+        width: hs.rem(150);
+    }
+
+    &__job {
+        width: hs.rem(450);
+        display: flex;
+        justify-content: center;
+
+        span {
+            font-size: hs.rem(14);
+            color: hs.$darkPurple;
+            background-color: hs.$bgJobContainerColor;
+            padding: hs.rem(5) hs.rem(10);
+            border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+        }
+    }
+
+    &__phone {
+        width: hs.rem(350);
+        color: hs.$darkPurple;
+    }
+
+    &__email {
+        width: hs.rem(500);
+        color: hs.$purple;
+    }
+
+    &__moreIcon {
+        margin-left: auto;
+        color: hs.$purple;
+        font-size: hs.rem(18);
+    }
+}

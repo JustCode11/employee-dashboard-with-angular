@@ -1,0 +1,86 @@
+<main>
+    <h1>People <span>{{employees.length}}</span></h1>
+    <div class="overviewBar">
+        <div class="overviewBar__stats">
+            <div class="overviewBar__stats__item">
+                <span>Ill</span>
+                <span class="overviewBar__stats__item__icon">
+                    <fa-icon [icon]="faCapsules"></fa-icon>
+                    <span>{{numberIll}}</span>
+                </span>
+            </div>
+            <div class="overviewBar__stats__item">
+                <span>Vacation</span>
+                <span class="overviewBar__stats__item__icon">
+                    <fa-icon [icon]="faPlane"></fa-icon>
+                    <span>{{numberVacation}}</span>
+                </span>
+            </div>
+            <div class="overviewBar__stats__item">
+                <span>Day off</span>
+                <span class="overviewBar__stats__item__icon">
+                    <fa-icon [icon]="faThumbtack"></fa-icon>
+                    <span>{{numberDayOff}}</span>
+                </span>
+            </div>
+            <div class="overviewBar__stats__item">
+                <span>At office</span>
+                <span class="overviewBar__stats__item__icon">
+                    <fa-icon [icon]="faPaperclip"></fa-icon>
+                    <span>{{numberAtWork}}</span>
+                </span>
+            </div>
+        </div>
+        <div class="overviewBar__buttons">
+            <button><fa-icon [icon]="faClock"></fa-icon> Register time away</button>
+            <button>Add a new employee</button>
+        </div>
+    </div>
+    <div class="separator">
+        <hr />
+    </div>
+    <div class="searchBar">
+        <div class="searchBar__inputContainer">
+            <div class="searchBar__inputContainer__inputField">
+                <label hidden>Search by name, email, team, etc...</label>
+                <input #searchBox id="search-box" (input)="search(searchBox.value)" class="searchElement" type="text"
+                    placeholder="Search by name, email, team, etc..." />
+            </div>
+            <div class="searchBar__inputContainer__inputField">
+                <label hidden>Position</label>
+                <select class="searchElement" required>
+                    <option value="" disabled selected hidden>Position</option>
+                    <option value="Manager">Manager</option>
+                </select>
+            </div>
+        </div>
+        <div class="searchBar__iconsContainer">
+            <div class="searchBar__iconsContainer__sortByContainer">
+                <label>Sort by: </label>
+                <select>
+                    <option>Date</option>
+                </select>
+            </div>
+            <div class="searchBar__iconsContainer__viewContainer">
+                <div (click)="toggleGridView()"
+                    [ngClass]="viewToggle === 'grid' ? 'searchBar__iconsContainer__viewContainer__item selected' : 'searchBar__iconsContainer__viewContainer__item'">
+                    <fa-icon [icon]="faGrip"></fa-icon>
+                </div>
+                <div (click)="toggleListView()"
+                    [ngClass]="viewToggle === 'list' ? 'searchBar__iconsContainer__viewContainer__item selected' : 'searchBar__iconsContainer__viewContainer__item'">
+                    <fa-icon [icon]="faBars"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngSwitch]="viewToggle">
+        <div *ngSwitchCase="'grid'" class="employeeContainer">
+            <app-employee-card *ngFor="let employee of employees" [employee]="employee"></app-employee-card>
+        </div>
+        <ul *ngSwitchCase="'list'" class="employeeListContainer">
+            <li class="employeeListContainer__listItemContainer" *ngFor="let employee of employees">
+                <app-employee-list-item [employee]="employee"></app-employee-list-item>
+            </li>
+        </ul>
+    </div>
+</main>

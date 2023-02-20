@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card__top">
+        <div [ngSwitch]="employee.status">
+            <fa-icon *ngSwitchCase="'work'" [icon]="faPaperclip"></fa-icon>
+            <fa-icon *ngSwitchCase="'ill'" [icon]="faCapsules"></fa-icon>
+            <fa-icon *ngSwitchCase="'vacation'" [icon]="faPlane"></fa-icon>
+            <fa-icon *ngSwitchCase="'dayOff'" [icon]="faThumbtack"></fa-icon>
+        </div>
+        <div>
+            <fa-icon [icon]="faEllipsisVertical"></fa-icon>
+        </div>
+    </div>
+    <div class="card__bottom spacing">
+        <img [src]="employee.img" alt="{{employee.name}} Profile Image">
+        <div class="card__bottom__name">{{employee.name}}</div>
+        <div class="card__bottom__jobContainer">
+            <span class="card__bottom__jobContainer__item">{{employee.job}}</span>
+        </div>
+        <div class="card__bottom__phone">{{employee.phone}}</div>
+        <div class="card__bottom__email">{{employee.email}}</div>
+    </div>
+</div>

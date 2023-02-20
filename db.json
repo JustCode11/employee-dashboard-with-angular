@@ -1,0 +1,76 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "Edward Steward",
+            "img": "/assets/img/profile/male/m1.jpg",
+            "job": "Marketing Coordinator",
+            "phone": "(704) 555-0127",
+            "email": "d.steward@gmail.com",
+            "status": "work"
+        },
+        {
+            "id": 2,
+            "name": "Roselle Ehrman",
+            "img": "/assets/img/profile/female/f5.jpg",
+            "job": "Web Designer",
+            "phone": "(704) 555-0128",
+            "email": "roselle@gmail.com",
+            "status": "dayOff"
+        },
+        {
+            "id": 3,
+            "name": "Kate Boisson",
+            "img": "/assets/img/profile/female/f2.jpg",
+            "job": "Web Designer",
+            "phone": "(219) 555-0114",
+            "email": "kate_d@gmail.com",
+            "status": "work"
+        },
+        {
+            "id": 4,
+            "name": "Ross Rohan",
+            "img": "/assets/img/profile/male/m2.jpg",
+            "job": "Copywrighter",
+            "phone": "(229) 555-0109",
+            "email": "rossrohan@gmail.com",
+            "status": "work"
+        },
+        {
+            "id": 5,
+            "name": "Rita Finnigan",
+            "img": "/assets/img/profile/female/f1.jpg",
+            "job": "Administration",
+            "phone": "(239) 555-0089",
+            "email": "r.finnigan@gmail.com",
+            "status": "work"
+        },
+        {
+            "id": 6,
+            "name": "Yvonne Ehrlich",
+            "img": "/assets/img/profile/female/f4.jpg",
+            "job": "Copywrighter",
+            "phone": "(366) 555-0766",
+            "email": "y_ehr@gmail.com",
+            "status": "work"
+        },
+        {
+            "id": 7,
+            "name": "Thomas DeSoul",
+            "img": "/assets/img/profile/male/m3.jpg",
+            "job": "Web Designer",
+            "phone": "(707) 555-0124",
+            "email": "thomas_desoul@gmail.com",
+            "status": "ill"
+        },
+        {
+            "id": 8,
+            "name": "Anthony Wright",
+            "img": "/assets/img/profile/male/m4.jpg",
+            "job": "Web Designer",
+            "phone": "(500) 555-8722",
+            "email": "anthonywright@gmail.com",
+            "status": "vacation"
+        }
+    ]
+}
